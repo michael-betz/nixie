@@ -1,2 +1,2 @@
 # nixie
-a classic nixie clock
+a HP 5245L frequency counter had to die for this ...
