@@ -794,7 +794,7 @@ U 1 1 5AF2026C
 P 7300 1600
 F 0 "NE3" H 7172 1554 50  0000 R CNN
 F 1 "n" H 7172 1645 50  0000 R CNN
-F 2 "Valve:Valve_Glimm" V 7300 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 7300 1700 50  0001 C CNN
 F 3 "~" V 7300 1700 50  0001 C CNN
 F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    7300 1600
@@ -806,7 +806,7 @@ U 1 1 5AF24C3D
 P 7750 1600
 F 0 "NE4" H 7622 1554 50  0000 R CNN
 F 1 "n" H 7622 1645 50  0000 R CNN
-F 2 "Valve:Valve_Glimm" V 7750 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 7750 1700 50  0001 C CNN
 F 3 "~" V 7750 1700 50  0001 C CNN
 F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    7750 1600
@@ -885,7 +885,7 @@ U 1 1 5AF5E67A
 P 3750 1600
 F 0 "NE1" H 3622 1554 50  0000 R CNN
 F 1 "n" H 3622 1645 50  0000 R CNN
-F 2 "Valve:Valve_Glimm" V 3750 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 3750 1700 50  0001 C CNN
 F 3 "~" V 3750 1700 50  0001 C CNN
 F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    3750 1600
@@ -897,7 +897,7 @@ U 1 1 5AF5E680
 P 4200 1600
 F 0 "NE2" H 4072 1554 50  0000 R CNN
 F 1 "n" H 4072 1645 50  0000 R CNN
-F 2 "Valve:Valve_Glimm" V 4200 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 4200 1700 50  0001 C CNN
 F 3 "~" V 4200 1700 50  0001 C CNN
 F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    4200 1600
@@ -1227,4 +1227,328 @@ Wire Wire Line
 Connection ~ 1550 6050
 Wire Wire Line
 	1550 6050 1550 6250
+$Comp
+L Connector_Generic:Conn_01x32 J1
+U 1 1 5AEA51F5
+P 7800 4600
+F 0 "J1" H 7720 6317 50  0000 C CNN
+F 1 "Conn_01x32" H 7720 6226 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x32_P1.27mm_Vertical" H 7800 4600 50  0001 C CNN
+F 3 "~" H 7800 4600 50  0001 C CNN
+	1    7800 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x32 J3
+U 1 1 5AEA53D0
+P 8850 4600
+F 0 "J3" H 8770 6317 50  0000 C CNN
+F 1 "Conn_01x32" H 8770 6226 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x32_P1.27mm_Vertical" H 8850 4600 50  0001 C CNN
+F 3 "~" H 8850 4600 50  0001 C CNN
+	1    8850 4600
+	-1   0    0    -1  
+$EndComp
+Text Label 8050 3100 0    50   ~ 0
+n5_0
+Text Label 8050 3200 0    50   ~ 0
+n5_1
+Text Label 8050 3300 0    50   ~ 0
+n5_2
+Text Label 8050 3400 0    50   ~ 0
+n5_3
+Text Label 8050 3500 0    50   ~ 0
+n5_4
+Text Label 8050 3600 0    50   ~ 0
+n5_5
+Text Label 8050 3700 0    50   ~ 0
+n5_6
+Text Label 8050 3800 0    50   ~ 0
+n5_7
+Text Label 8050 3900 0    50   ~ 0
+n5_8
+Text Label 8050 4000 0    50   ~ 0
+n5_9
+Wire Wire Line
+	8000 3100 8250 3100
+Wire Wire Line
+	8000 3200 8250 3200
+Wire Wire Line
+	8000 3300 8250 3300
+Wire Wire Line
+	8000 3400 8250 3400
+Wire Wire Line
+	8000 3500 8250 3500
+Wire Wire Line
+	8000 3600 8250 3600
+Wire Wire Line
+	8000 3700 8250 3700
+Wire Wire Line
+	8000 3800 8250 3800
+Wire Wire Line
+	8000 3900 8250 3900
+Wire Wire Line
+	8000 4000 8250 4000
+Text Label 8050 4100 0    50   ~ 0
+n4_0
+Wire Wire Line
+	8000 4100 8250 4100
+Wire Wire Line
+	8000 4200 8250 4200
+Wire Wire Line
+	8000 4300 8250 4300
+Wire Wire Line
+	8000 4400 8250 4400
+Wire Wire Line
+	8000 4500 8250 4500
+Wire Wire Line
+	8000 4600 8250 4600
+Wire Wire Line
+	8000 4700 8250 4700
+Wire Wire Line
+	8000 4800 8250 4800
+Wire Wire Line
+	8000 4900 8250 4900
+Wire Wire Line
+	8000 5000 8250 5000
+Text Label 8050 4200 0    50   ~ 0
+n4_1
+Text Label 8050 4300 0    50   ~ 0
+n4_2
+Text Label 8050 4400 0    50   ~ 0
+n4_3
+Text Label 8050 4500 0    50   ~ 0
+n4_4
+Text Label 8050 4600 0    50   ~ 0
+n4_5
+Text Label 8050 4700 0    50   ~ 0
+n4_6
+Text Label 8050 4800 0    50   ~ 0
+n4_7
+Text Label 8050 4900 0    50   ~ 0
+n4_8
+Text Label 8050 5000 0    50   ~ 0
+n4_9
+Text Label 8050 5100 0    50   ~ 0
+colons_1
+Wire Wire Line
+	8000 5100 8250 5100
+Wire Wire Line
+	8000 5200 8250 5200
+Text Label 8050 5200 0    50   ~ 0
+n3_0
+Text Label 8050 5300 0    50   ~ 0
+n3_1
+Text Label 8050 5400 0    50   ~ 0
+n3_2
+Text Label 8050 5500 0    50   ~ 0
+n3_3
+Text Label 8050 5600 0    50   ~ 0
+n3_4
+Text Label 8050 5700 0    50   ~ 0
+n3_5
+Text Label 8050 5800 0    50   ~ 0
+n3_6
+Text Label 8050 5900 0    50   ~ 0
+n3_7
+Text Label 8050 6000 0    50   ~ 0
+n3_8
+Text Label 8050 6100 0    50   ~ 0
+n3_9
+Wire Wire Line
+	8000 5300 8250 5300
+Wire Wire Line
+	8000 5400 8250 5400
+Wire Wire Line
+	8000 5500 8250 5500
+Wire Wire Line
+	8000 5600 8250 5600
+Wire Wire Line
+	8000 5700 8250 5700
+Wire Wire Line
+	8000 5800 8250 5800
+Wire Wire Line
+	8000 5900 8250 5900
+Wire Wire Line
+	8000 6000 8250 6000
+Wire Wire Line
+	8000 6100 8250 6100
+Wire Wire Line
+	9050 3100 9300 3100
+Wire Wire Line
+	9050 3200 9300 3200
+Wire Wire Line
+	9050 3300 9300 3300
+Wire Wire Line
+	9050 3400 9300 3400
+Wire Wire Line
+	9050 3500 9300 3500
+Wire Wire Line
+	9050 3600 9300 3600
+Wire Wire Line
+	9050 3700 9300 3700
+Wire Wire Line
+	9050 3800 9300 3800
+Wire Wire Line
+	9050 3900 9300 3900
+Wire Wire Line
+	9050 4000 9300 4000
+Text Label 9100 3100 0    50   ~ 0
+n2_0
+Text Label 9100 3200 0    50   ~ 0
+n2_1
+Text Label 9100 3300 0    50   ~ 0
+n2_2
+Text Label 9100 3400 0    50   ~ 0
+n2_3
+Text Label 9100 3500 0    50   ~ 0
+n2_4
+Text Label 9100 3600 0    50   ~ 0
+n2_5
+Text Label 9100 3700 0    50   ~ 0
+n2_6
+Text Label 9100 3800 0    50   ~ 0
+n2_7
+Text Label 9100 3900 0    50   ~ 0
+n2_8
+Text Label 9100 4000 0    50   ~ 0
+n2_9
+Text Label 9100 4100 0    50   ~ 0
+colons_0
+Wire Wire Line
+	9050 4100 9300 4100
+Wire Wire Line
+	9050 4200 9300 4200
+Wire Wire Line
+	9050 4300 9300 4300
+Wire Wire Line
+	9050 4400 9300 4400
+Wire Wire Line
+	9050 4500 9300 4500
+Wire Wire Line
+	9050 4600 9300 4600
+Wire Wire Line
+	9050 4700 9300 4700
+Wire Wire Line
+	9050 4800 9300 4800
+Wire Wire Line
+	9050 4900 9300 4900
+Wire Wire Line
+	9050 5000 9300 5000
+Wire Wire Line
+	9050 5100 9300 5100
+Text Label 9100 4200 0    50   ~ 0
+n1_0
+Text Label 9100 4300 0    50   ~ 0
+n1_1
+Text Label 9100 4400 0    50   ~ 0
+n1_2
+Text Label 9100 4500 0    50   ~ 0
+n1_3
+Text Label 9100 4600 0    50   ~ 0
+n1_4
+Text Label 9100 4700 0    50   ~ 0
+n1_5
+Text Label 9100 4800 0    50   ~ 0
+n1_6
+Text Label 9100 4900 0    50   ~ 0
+n1_7
+Text Label 9100 5000 0    50   ~ 0
+n1_8
+Text Label 9100 5100 0    50   ~ 0
+n1_9
+Text Label 9100 5200 0    50   ~ 0
+n0_0
+Wire Wire Line
+	9050 5200 9300 5200
+Wire Wire Line
+	9050 5300 9300 5300
+Wire Wire Line
+	9050 5400 9300 5400
+Wire Wire Line
+	9050 5500 9300 5500
+Wire Wire Line
+	9050 5600 9300 5600
+Wire Wire Line
+	9050 5700 9300 5700
+Wire Wire Line
+	9050 5800 9300 5800
+Wire Wire Line
+	9050 5900 9300 5900
+Wire Wire Line
+	9050 6000 9300 6000
+Wire Wire Line
+	9050 6100 9300 6100
+Text Label 9100 5300 0    50   ~ 0
+n0_1
+Text Label 9100 5400 0    50   ~ 0
+n0_2
+Text Label 9100 5500 0    50   ~ 0
+n0_3
+Text Label 9100 5600 0    50   ~ 0
+n0_4
+Text Label 9100 5700 0    50   ~ 0
+n0_5
+Text Label 9100 5800 0    50   ~ 0
+n0_6
+Text Label 9100 5900 0    50   ~ 0
+n0_7
+Text Label 9100 6000 0    50   ~ 0
+n0_8
+Text Label 9100 6100 0    50   ~ 0
+n0_9
+$Comp
+L power:HT #PWR0112
+U 1 1 5AFBC196
+P 8050 6200
+F 0 "#PWR0112" H 8050 6320 50  0001 C CNN
+F 1 "HT" H 8070 6343 50  0000 C CNN
+F 2 "" H 8050 6200 50  0001 C CNN
+F 3 "" H 8050 6200 50  0001 C CNN
+	1    8050 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8000 6200 8050 6200
+$Comp
+L power:HT #PWR0132
+U 1 1 5AFD2270
+P 9100 6200
+F 0 "#PWR0132" H 9100 6320 50  0001 C CNN
+F 1 "HT" H 9120 6343 50  0000 C CNN
+F 2 "" H 9100 6200 50  0001 C CNN
+F 3 "" H 9100 6200 50  0001 C CNN
+	1    9100 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 6200 9050 6200
+$Comp
+L Connector_Generic:Conn_01x32 J4
+U 1 1 5AFE8CBF
+P 8450 4600
+F 0 "J4" H 8530 4592 50  0000 L CNN
+F 1 "Conn_01x32" H 8530 4501 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x32_P1.27mm_Vertical" H 8450 4600 50  0001 C CNN
+F 3 "~" H 8450 4600 50  0001 C CNN
+	1    8450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x32 J5
+U 1 1 5AFE8D6B
+P 9500 4600
+F 0 "J5" H 9580 4592 50  0000 L CNN
+F 1 "Conn_01x32" H 9580 4501 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x32_P1.27mm_Vertical" H 9500 4600 50  0001 C CNN
+F 3 "~" H 9500 4600 50  0001 C CNN
+	1    9500 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 6200 8250 6200
+Connection ~ 8050 6200
+Wire Wire Line
+	9100 6200 9300 6200
+Connection ~ 9100 6200
 $EndSCHEMATC

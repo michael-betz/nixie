@@ -407,6 +407,7 @@ F 0 "P1" H 6372 1947 60  0000 R CNN
 F 1 "TTL_232R_3V3" H 6372 2053 60  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6400 1650 60  0001 C CNN
 F 3 "" H 6400 1650 60  0001 C CNN
+F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    6400 1650
 	-1   0    0    1   
 $EndComp

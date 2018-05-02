@@ -4,7 +4,7 @@ use <crystal.scad>
 // $fn=30;
 
 tubeSpacing  = 10.5;
-groupSpacing = 45.5;
+groupSpacing = 50.0;
 
 module nixies( scaling ) {
   module tubeGroup() {
