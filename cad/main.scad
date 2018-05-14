@@ -11,14 +11,22 @@ module nixies( scaling ) {
     translate([-tubeSpacing,0,0]) scale([scaling, scaling, scaling]) nixie8422();
     translate([ tubeSpacing,0,0]) scale([scaling, scaling, scaling]) nixie8422();
   }
-  translate([0,0,0])              tubeGroup();
-  translate([groupSpacing,0,0])   tubeGroup();
-  translate([-groupSpacing,0,0])  tubeGroup();
+  module colonGroup() {
+    translate([0,5,5]) scale([scaling, scaling, scaling]) cylinder(h=20, r=3, center=true);
+    translate([0,-5,5])scale([scaling, scaling, scaling]) cylinder(h=20, r=3, center=true);
+  }
+  union(){
+    translate([0,0,0])              tubeGroup();
+    translate([groupSpacing/2,0,0]) colonGroup();
+    translate([groupSpacing,0,0])   tubeGroup();
+    translate([-groupSpacing/2,0,0]) colonGroup();
+    translate([-groupSpacing,0,0])  tubeGroup();
+  }
 }
 
 // standoffs
 module sOffs(){
-  soDist = 5;
+  soDist = 3;
   translate([ 145/2-soDist, 40/2-soDist,-pcbDist+0.5]) cylinder(h=pcbDist, r=4);
   translate([-145/2+soDist,-40/2+soDist,-pcbDist+0.5]) cylinder(h=pcbDist, r=4);
   translate([-145/2+soDist, 40/2-soDist,-pcbDist+0.5]) cylinder(h=pcbDist, r=4);
@@ -52,7 +60,7 @@ module frontPanel() {
   panel();
   // the pcb
   translate([0,0,-pcbDist]) color("darkgreen") cube(size=[144,39,1], center=true);
-  color("white") nixies( 1.0 );
+  // color("white") nixies( 1.0 );
 }
 
 
@@ -72,7 +80,7 @@ color("white") translate([0,fpThickness/2,0]) translate([150/2,42,22]) crystal()
 
 // Frontpanel
 // sidewalls
-union(){
+%union(){
   translate([150/2,fpThickness/2,-45/2]) rotate([90,0,0]) frontPanel();
   translate([0,3,0]) teeth(0.98);
   translate([0,fpThickness,-45]) cube(size=[2.5,78,45], center=false);

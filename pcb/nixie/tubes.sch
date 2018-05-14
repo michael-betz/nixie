@@ -970,25 +970,25 @@ Text Label 4000 1900 3    50   ~ 0
 colons_1
 Wire Wire Line
 	4000 1850 4000 2250
-Text Label 4200 3750 0    50   ~ 0
+Text Label 4200 6150 0    50   ~ 0
 n5_0
-Text Label 4200 3850 0    50   ~ 0
+Text Label 4200 7200 0    50   ~ 0
 n5_1
-Text Label 4200 3950 0    50   ~ 0
+Text Label 4200 7100 0    50   ~ 0
 n5_2
-Text Label 4200 4050 0    50   ~ 0
+Text Label 4200 7000 0    50   ~ 0
 n5_3
-Text Label 4200 4150 0    50   ~ 0
+Text Label 4200 6900 0    50   ~ 0
 n5_4
-Text Label 4200 4250 0    50   ~ 0
+Text Label 4200 6800 0    50   ~ 0
 n5_5
-Text Label 4200 4350 0    50   ~ 0
+Text Label 4200 6700 0    50   ~ 0
 n5_6
-Text Label 4200 4450 0    50   ~ 0
+Text Label 4200 6600 0    50   ~ 0
 n5_7
-Text Label 4200 4700 0    50   ~ 0
+Text Label 4200 6350 0    50   ~ 0
 n5_8
-Text Label 4200 4800 0    50   ~ 0
+Text Label 4200 6250 0    50   ~ 0
 n5_9
 Wire Wire Line
 	4150 3750 4400 3750
@@ -1010,7 +1010,7 @@ Wire Wire Line
 	4150 4700 4400 4700
 Wire Wire Line
 	4150 4800 4400 4800
-Text Label 4200 4900 0    50   ~ 0
+Text Label 4200 5000 0    50   ~ 0
 n4_0
 Wire Wire Line
 	4150 4900 4400 4900
@@ -1032,49 +1032,49 @@ Wire Wire Line
 	4150 5850 4400 5850
 Wire Wire Line
 	4150 5950 4400 5950
-Text Label 4200 5000 0    50   ~ 0
-n4_1
-Text Label 4200 5100 0    50   ~ 0
-n4_2
-Text Label 4200 5200 0    50   ~ 0
-n4_3
-Text Label 4200 5300 0    50   ~ 0
-n4_4
-Text Label 4200 5400 0    50   ~ 0
-n4_5
-Text Label 4200 5650 0    50   ~ 0
-n4_6
-Text Label 4200 5750 0    50   ~ 0
-n4_7
-Text Label 4200 5850 0    50   ~ 0
-n4_8
-Text Label 4200 5950 0    50   ~ 0
-n4_9
 Text Label 4200 6050 0    50   ~ 0
+n4_1
+Text Label 4200 5950 0    50   ~ 0
+n4_2
+Text Label 4200 5850 0    50   ~ 0
+n4_3
+Text Label 4200 5750 0    50   ~ 0
+n4_4
+Text Label 4200 5650 0    50   ~ 0
+n4_5
+Text Label 4200 5400 0    50   ~ 0
+n4_6
+Text Label 4200 5300 0    50   ~ 0
+n4_7
+Text Label 4200 5200 0    50   ~ 0
+n4_8
+Text Label 4200 5100 0    50   ~ 0
+n4_9
+Text Label 4200 4900 0    50   ~ 0
 colons_1
 Wire Wire Line
 	4150 6050 4400 6050
 Wire Wire Line
 	4150 6150 4400 6150
-Text Label 4200 6150 0    50   ~ 0
+Text Label 4200 3750 0    50   ~ 0
 n3_0
-Text Label 4200 6250 0    50   ~ 0
+Text Label 4200 4800 0    50   ~ 0
 n3_1
-Text Label 4200 6350 0    50   ~ 0
+Text Label 4200 4700 0    50   ~ 0
 n3_2
-Text Label 4200 6600 0    50   ~ 0
+Text Label 4200 4450 0    50   ~ 0
 n3_3
-Text Label 4200 6700 0    50   ~ 0
+Text Label 4200 4350 0    50   ~ 0
 n3_4
-Text Label 4200 6800 0    50   ~ 0
+Text Label 4200 4250 0    50   ~ 0
 n3_5
-Text Label 4200 6900 0    50   ~ 0
+Text Label 4200 4150 0    50   ~ 0
 n3_6
-Text Label 4200 7000 0    50   ~ 0
+Text Label 4200 4050 0    50   ~ 0
 n3_7
-Text Label 4200 7100 0    50   ~ 0
+Text Label 4200 3950 0    50   ~ 0
 n3_8
-Text Label 4200 7200 0    50   ~ 0
+Text Label 4200 3850 0    50   ~ 0
 n3_9
 Wire Wire Line
 	4150 6250 4400 6250
@@ -1095,8 +1095,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 7200 4400 7200
 Wire Wire Line
-	6000 3750 6250 3750
-Wire Wire Line
 	6000 3850 6250 3850
 Wire Wire Line
 	6000 3950 6250 3950
@@ -1114,27 +1112,27 @@ Wire Wire Line
 	6000 4700 6250 4700
 Wire Wire Line
 	6000 4800 6250 4800
-Text Label 6050 3750 0    50   ~ 0
-n2_0
-Text Label 6050 3850 0    50   ~ 0
-n2_1
-Text Label 6050 3950 0    50   ~ 0
-n2_2
-Text Label 6050 4050 0    50   ~ 0
-n2_3
-Text Label 6050 4150 0    50   ~ 0
-n2_4
-Text Label 6050 4250 0    50   ~ 0
-n2_5
-Text Label 6050 4350 0    50   ~ 0
-n2_6
 Text Label 6050 4450 0    50   ~ 0
-n2_7
-Text Label 6050 4700 0    50   ~ 0
-n2_8
-Text Label 6050 4800 0    50   ~ 0
-n2_9
+n2_0
+Text Label 6050 4350 0    50   ~ 0
+n2_1
+Text Label 6050 4250 0    50   ~ 0
+n2_2
+Text Label 6050 4150 0    50   ~ 0
+n2_3
+Text Label 6050 4050 0    50   ~ 0
+n2_4
+Text Label 6050 3950 0    50   ~ 0
+n2_5
+Text Label 6050 3850 0    50   ~ 0
+n2_6
 Text Label 6050 4900 0    50   ~ 0
+n2_7
+Text Label 6050 4800 0    50   ~ 0
+n2_8
+Text Label 6050 4700 0    50   ~ 0
+n2_9
+Text Label 6050 5000 0    50   ~ 0
 colons_0
 Wire Wire Line
 	6000 4900 6250 4900
@@ -1153,35 +1151,33 @@ Wire Wire Line
 Wire Wire Line
 	6000 5750 6250 5750
 Wire Wire Line
-	6000 5850 6250 5850
-Wire Wire Line
 	6000 5950 6250 5950
 Wire Wire Line
 	6000 6050 6250 6050
-Text Label 6050 5000 0    50   ~ 0
-n1_0
-Text Label 6050 5100 0    50   ~ 0
-n1_1
-Text Label 6050 5200 0    50   ~ 0
-n1_2
-Text Label 6050 5300 0    50   ~ 0
-n1_3
-Text Label 6050 5400 0    50   ~ 0
-n1_4
-Text Label 6050 5650 0    50   ~ 0
-n1_5
-Text Label 6050 5750 0    50   ~ 0
-n1_6
-Text Label 6050 5850 0    50   ~ 0
-n1_7
-Text Label 6050 5950 0    50   ~ 0
-n1_8
-Text Label 6050 6050 0    50   ~ 0
-n1_9
-Text Label 6050 6150 0    50   ~ 0
-n0_0
 Wire Wire Line
 	6000 6150 6250 6150
+Text Label 6050 5850 0    50   ~ 0
+n1_0
+Text Label 6050 5750 0    50   ~ 0
+n1_1
+Text Label 6050 5650 0    50   ~ 0
+n1_2
+Text Label 6050 5400 0    50   ~ 0
+n1_3
+Text Label 6050 5300 0    50   ~ 0
+n1_4
+Text Label 6050 5200 0    50   ~ 0
+n1_5
+Text Label 6050 5100 0    50   ~ 0
+n1_6
+Text Label 6050 6150 0    50   ~ 0
+n1_7
+Text Label 6050 6050 0    50   ~ 0
+n1_8
+Text Label 6050 5950 0    50   ~ 0
+n1_9
+Text Label 6050 7000 0    50   ~ 0
+n0_0
 Wire Wire Line
 	6000 6250 6250 6250
 Wire Wire Line
@@ -1200,25 +1196,26 @@ Wire Wire Line
 	6000 7100 6250 7100
 Wire Wire Line
 	6000 7200 6250 7200
-Text Label 6050 6250 0    50   ~ 0
-n0_1
-Text Label 6050 6350 0    50   ~ 0
-n0_2
-Text Label 6050 6600 0    50   ~ 0
-n0_3
-Text Label 6050 6700 0    50   ~ 0
-n0_4
-Text Label 6050 6800 0    50   ~ 0
-n0_5
+Wire Wire Line
+	6000 7300 6250 7300
 Text Label 6050 6900 0    50   ~ 0
+n0_1
+Text Label 6050 6800 0    50   ~ 0
+n0_2
+Text Label 6050 6700 0    50   ~ 0
+n0_3
+Text Label 6050 6600 0    50   ~ 0
+n0_4
+Text Label 6050 6350 0    50   ~ 0
+n0_5
+Text Label 6050 6250 0    50   ~ 0
 n0_6
-Text Label 6050 7000 0    50   ~ 0
+Text Label 6050 7300 0    50   ~ 0
 n0_7
-Text Label 6050 7100 0    50   ~ 0
-n0_8
 Text Label 6050 7200 0    50   ~ 0
+n0_8
+Text Label 6050 7100 0    50   ~ 0
 n0_9
-NoConn ~ 6000 7300
 NoConn ~ 4150 7300
 Wire Wire Line
 	1550 5900 1550 6050
@@ -1232,9 +1229,10 @@ L Connector_Generic:Conn_01x32 J1
 U 1 1 5AF0DB96
 P 8400 4350
 F 0 "J1" H 8320 6067 50  0000 C CNN
-F 1 "Conn_01x32" H 8320 5976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Horizontal" H 8400 4350 50  0001 C CNN
+F 1 "Conn_01x32" H 8500 6000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical" H 8400 4350 50  0001 C CNN
 F 3 "~" H 8400 4350 50  0001 C CNN
+F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    8400 4350
 	-1   0    0    -1  
 $EndComp
@@ -1244,8 +1242,9 @@ U 1 1 5AF0DCBD
 P 9050 4350
 F 0 "J3" H 9050 6050 50  0000 L CNN
 F 1 "Conn_01x32" H 8900 5950 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Vertical" H 9050 4350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical" H 9050 4350 50  0001 C CNN
 F 3 "~" H 9050 4350 50  0001 C CNN
+F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    9050 4350
 	1    0    0    -1  
 $EndComp
@@ -1255,8 +1254,9 @@ U 1 1 5AF0DDB1
 P 9550 4350
 F 0 "J4" H 9470 6067 50  0000 C CNN
 F 1 "Conn_01x32" H 9470 5976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Horizontal" H 9550 4350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical" H 9550 4350 50  0001 C CNN
 F 3 "~" H 9550 4350 50  0001 C CNN
+F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    9550 4350
 	-1   0    0    -1  
 $EndComp
@@ -1266,12 +1266,13 @@ U 1 1 5AF0DE78
 P 10200 4350
 F 0 "J5" H 10200 6100 50  0000 L CNN
 F 1 "Conn_01x32" H 10050 6000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Vertical" H 10200 4350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x32_P2.54mm_Vertical" H 10200 4350 50  0001 C CNN
 F 3 "~" H 10200 4350 50  0001 C CNN
+F 4 "" H 0   0   50  0001 C CNN "DPN"
 	1    10200 4350
 	1    0    0    -1  
 $EndComp
-Text Label 8650 2850 0    50   ~ 0
+Text Label 8650 3850 0    50   ~ 0
 n5_0
 Text Label 8650 2950 0    50   ~ 0
 n5_1
@@ -1292,7 +1293,7 @@ n5_8
 Text Label 8650 3750 0    50   ~ 0
 n5_9
 Wire Wire Line
-	8600 2850 8850 2850
+	8600 3850 8850 3850
 Wire Wire Line
 	8600 2950 8850 2950
 Wire Wire Line
@@ -1311,10 +1312,8 @@ Wire Wire Line
 	8600 3650 8850 3650
 Wire Wire Line
 	8600 3750 8850 3750
-Text Label 8650 3850 0    50   ~ 0
+Text Label 8650 4850 0    50   ~ 0
 n4_0
-Wire Wire Line
-	8600 3850 8850 3850
 Wire Wire Line
 	8600 3950 8850 3950
 Wire Wire Line
@@ -1332,7 +1331,7 @@ Wire Wire Line
 Wire Wire Line
 	8600 4650 8850 4650
 Wire Wire Line
-	8600 4750 8850 4750
+	8600 4850 8850 4850
 Text Label 8650 3950 0    50   ~ 0
 n4_1
 Text Label 8650 4050 0    50   ~ 0
@@ -1351,13 +1350,11 @@ Text Label 8650 4650 0    50   ~ 0
 n4_8
 Text Label 8650 4750 0    50   ~ 0
 n4_9
-Text Label 8650 4850 0    50   ~ 0
+Text Label 8650 4950 0    50   ~ 0
 colons_1
 Wire Wire Line
-	8600 4850 8850 4850
-Wire Wire Line
 	8600 4950 8850 4950
-Text Label 8650 4950 0    50   ~ 0
+Text Label 8650 5950 0    50   ~ 0
 n3_0
 Text Label 8650 5050 0    50   ~ 0
 n3_1
@@ -1396,8 +1393,6 @@ Wire Wire Line
 Wire Wire Line
 	8600 5850 8850 5850
 Wire Wire Line
-	9750 2850 10000 2850
-Wire Wire Line
 	9750 2950 10000 2950
 Wire Wire Line
 	9750 3050 10000 3050
@@ -1415,30 +1410,28 @@ Wire Wire Line
 	9750 3650 10000 3650
 Wire Wire Line
 	9750 3750 10000 3750
-Text Label 9800 2850 0    50   ~ 0
-n2_0
-Text Label 9800 2950 0    50   ~ 0
-n2_1
-Text Label 9800 3050 0    50   ~ 0
-n2_2
-Text Label 9800 3150 0    50   ~ 0
-n2_3
-Text Label 9800 3250 0    50   ~ 0
-n2_4
-Text Label 9800 3350 0    50   ~ 0
-n2_5
-Text Label 9800 3450 0    50   ~ 0
-n2_6
 Text Label 9800 3550 0    50   ~ 0
-n2_7
-Text Label 9800 3650 0    50   ~ 0
-n2_8
-Text Label 9800 3750 0    50   ~ 0
-n2_9
+n2_0
+Text Label 9800 3450 0    50   ~ 0
+n2_1
+Text Label 9800 3350 0    50   ~ 0
+n2_2
+Text Label 9800 3250 0    50   ~ 0
+n2_3
+Text Label 9800 3150 0    50   ~ 0
+n2_4
+Text Label 9800 3050 0    50   ~ 0
+n2_5
+Text Label 9800 2950 0    50   ~ 0
+n2_6
 Text Label 9800 3850 0    50   ~ 0
+n2_7
+Text Label 9800 3750 0    50   ~ 0
+n2_8
+Text Label 9800 3650 0    50   ~ 0
+n2_9
+Text Label 9800 3950 0    50   ~ 0
 colons_0
-Wire Wire Line
-	9750 3850 10000 3850
 Wire Wire Line
 	9750 3950 10000 3950
 Wire Wire Line
@@ -1459,30 +1452,28 @@ Wire Wire Line
 	9750 4750 10000 4750
 Wire Wire Line
 	9750 4850 10000 4850
-Text Label 9800 3950 0    50   ~ 0
-n1_0
-Text Label 9800 4050 0    50   ~ 0
-n1_1
-Text Label 9800 4150 0    50   ~ 0
-n1_2
-Text Label 9800 4250 0    50   ~ 0
-n1_3
-Text Label 9800 4350 0    50   ~ 0
-n1_4
-Text Label 9800 4450 0    50   ~ 0
-n1_5
-Text Label 9800 4550 0    50   ~ 0
-n1_6
 Text Label 9800 4650 0    50   ~ 0
-n1_7
-Text Label 9800 4750 0    50   ~ 0
-n1_8
-Text Label 9800 4850 0    50   ~ 0
-n1_9
+n1_0
+Text Label 9800 4550 0    50   ~ 0
+n1_1
+Text Label 9800 4450 0    50   ~ 0
+n1_2
+Text Label 9800 4350 0    50   ~ 0
+n1_3
+Text Label 9800 4250 0    50   ~ 0
+n1_4
+Text Label 9800 4150 0    50   ~ 0
+n1_5
+Text Label 9800 4050 0    50   ~ 0
+n1_6
 Text Label 9800 4950 0    50   ~ 0
+n1_7
+Text Label 9800 4850 0    50   ~ 0
+n1_8
+Text Label 9800 4750 0    50   ~ 0
+n1_9
+Text Label 9800 5650 0    50   ~ 0
 n0_0
-Wire Wire Line
-	9750 4950 10000 4950
 Wire Wire Line
 	9750 5050 10000 5050
 Wire Wire Line
@@ -1501,22 +1492,73 @@ Wire Wire Line
 	9750 5750 10000 5750
 Wire Wire Line
 	9750 5850 10000 5850
-Text Label 9800 5050 0    50   ~ 0
-n0_1
-Text Label 9800 5150 0    50   ~ 0
-n0_2
-Text Label 9800 5250 0    50   ~ 0
-n0_3
-Text Label 9800 5350 0    50   ~ 0
-n0_4
-Text Label 9800 5450 0    50   ~ 0
-n0_5
 Text Label 9800 5550 0    50   ~ 0
+n0_1
+Text Label 9800 5450 0    50   ~ 0
+n0_2
+Text Label 9800 5350 0    50   ~ 0
+n0_3
+Text Label 9800 5250 0    50   ~ 0
+n0_4
+Text Label 9800 5150 0    50   ~ 0
+n0_5
+Text Label 9800 5050 0    50   ~ 0
 n0_6
-Text Label 9800 5650 0    50   ~ 0
+Text Label 9800 5950 0    50   ~ 0
 n0_7
-Text Label 9800 5750 0    50   ~ 0
-n0_8
 Text Label 9800 5850 0    50   ~ 0
+n0_8
+Text Label 9800 5750 0    50   ~ 0
 n0_9
+Wire Wire Line
+	8600 4750 8850 4750
+Wire Wire Line
+	8600 5950 8850 5950
+Wire Wire Line
+	9750 3850 10000 3850
+Wire Wire Line
+	9750 4950 10000 4950
+Wire Wire Line
+	9750 5950 10000 5950
+Wire Wire Line
+	9750 2850 9900 2850
+$Comp
+L power:HT #PWR0112
+U 1 1 5B154ACB
+P 9900 2850
+F 0 "#PWR0112" H 9900 2970 50  0001 C CNN
+F 1 "HT" H 9920 2993 50  0000 C CNN
+F 2 "" H 9900 2850 50  0001 C CNN
+F 3 "" H 9900 2850 50  0001 C CNN
+	1    9900 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 9900 2850
+Wire Wire Line
+	9900 2850 10000 2850
+$Comp
+L power:GND #PWR0132
+U 1 1 5B155924
+P 8600 2850
+F 0 "#PWR0132" H 8600 2600 50  0001 C CNN
+F 1 "GND" H 8750 2800 50  0000 C CNN
+F 2 "" H 8600 2850 50  0001 C CNN
+F 3 "" H 8600 2850 50  0001 C CNN
+	1    8600 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 5B155ABB
+P 8850 2850
+F 0 "#PWR0133" H 8850 2600 50  0001 C CNN
+F 1 "GND" H 8700 2800 50  0000 C CNN
+F 2 "" H 8850 2850 50  0001 C CNN
+F 3 "" H 8850 2850 50  0001 C CNN
+	1    8850 2850
+	0    1    1    0   
+$EndComp
+NoConn ~ 6000 3750
+Wire Wire Line
+	6000 5850 6250 5850
 $EndSCHEMATC
