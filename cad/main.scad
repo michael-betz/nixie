@@ -64,10 +64,10 @@ module frontPanel() {
 }
 
 
-!translate([0,0,10]) difference(){
+!translate([0,0,0]) difference(){
   union(){
     translate([0,fpThickness/2,0]) drop();
-    scale([1,1,0.5]) translate([75,fpThickness/2,0]) rotate([0,90,0]) cylinder(r=fpThickness/2, h=155, center=true);
+    scale([1,1,0.75]) translate([75,fpThickness/2,0]) rotate([0,90,0]) cylinder(r=fpThickness/2, h=155, center=true);
   }
   union(){
     translate([-5,-1,-5]) cube(size=[160,12,5], center=false);
