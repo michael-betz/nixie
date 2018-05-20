@@ -12,8 +12,8 @@ module nixies( scaling ) {
     translate([ tubeSpacing,0,0]) scale([scaling, scaling, scaling]) nixie8422();
   }
   module colonGroup() {
-    translate([0,5,5]) scale([scaling, scaling, scaling]) cylinder(h=20, r=3, center=true);
-    translate([0,-5,5])scale([scaling, scaling, scaling]) cylinder(h=20, r=3, center=true);
+    translate([0,5,5]) scale([scaling, scaling, scaling]) cylinder(h=20, r=3.2, center=true);
+    translate([0,-5,5])scale([scaling, scaling, scaling]) cylinder(h=20, r=3.2, center=true);
   }
   union(){
     translate([0,0,0])              tubeGroup();
@@ -47,9 +47,9 @@ module panel() {
 module drop() {
   difference(){
     union(){
-      cube(size=[150, 83, 0.5], center=false);
-      translate([0,0,0.5])
-        scale([1.0,1.0,0.15])
+      translate([-2.5,0,0]) cube(size=[155, 83, 0.5], center=false);
+      translate([-2.5,0,0.5])
+        scale([1.03333333,1.0,0.15])
           surface( file="./drop.png", center=false, convexity=0 );
     }
     translate([150/2,42,0]) cylinder(h=30, r=15, center=true);
@@ -64,15 +64,17 @@ module frontPanel() {
 }
 
 
-translate([0,0,20]) difference(){
+!translate([0,0,10]) difference(){
   union(){
     translate([0,fpThickness/2,0]) drop();
-    scale([1,1,0.5]) translate([75,fpThickness/2,0]) rotate([0,90,0]) cylinder(r=fpThickness/2, h=150, center=true);
+    scale([1,1,0.5]) translate([75,fpThickness/2,0]) rotate([0,90,0]) cylinder(r=fpThickness/2, h=155, center=true);
   }
   union(){
     translate([-5,-1,-5]) cube(size=[160,12,5], center=false);
-    translate([0,3,0]) teeth(1.0);
-    translate([0,85.5,0]) teeth(1.0);
+    translate([0,3,0]) teeth(1.0, 140);
+    translate([0,85.5,0]) teeth(1.0, 140);
+    translate([151.0,4,0]) scale([0.6,1,1]) rotate([0,0,90]) teeth(1, 70);
+    translate([-1.0,4,0]) scale([0.6,1,1]) rotate([0,0,90]) teeth(1, 70);
   }
 }
 color("white") translate([0,fpThickness/2,0]) translate([150/2,42,22]) crystal();
@@ -80,17 +82,19 @@ color("white") translate([0,fpThickness/2,0]) translate([150/2,42,22]) crystal()
 
 // Frontpanel
 // sidewalls
-%union(){
+union(){
   translate([150/2,fpThickness/2,-45/2]) rotate([90,0,0]) frontPanel();
-  translate([0,3,0]) teeth(0.98);
-  translate([0,fpThickness,-45]) cube(size=[2.5,78,45], center=false);
-  translate([150-2.5,fpThickness,-45]) cube(size=[2.5,78,45], center=false);
-  translate([0,0,-45]) cube(size=[150,88,2.5], center=false);
+  translate([0,3,0]) teeth(0.98, 140);
+  translate([-2.5,0,-45]) cube(size=[2.5,88,45], center=false);
+  translate([150,0,-45]) cube(size=[2.5,88,45], center=false);
+  translate([151.0,4,0]) scale([0.6,1,1]) rotate([0,0,90]) teeth(0.98, 70);
+  translate([-2.5,0,-45-2.5]) cube(size=[155,88,2.5], center=false);
+  translate([-1.0,4,0]) scale([0.6,1,1]) rotate([0,0,90]) teeth(0.98, 70);
   translate([150/2,88-fpThickness/4,-45/2]) rotate([90,0,0]) cube(size=[150,45,fpThickness/2], center=true);
-  translate([0,85.5,0]) teeth(0.98);
+  translate([0,85.5,0]) teeth(0.98, 140);
 }
-module teeth( scaleF ){
-  for ( xTooth = [0:10:140] ){
+module teeth( scaleF, endLength=140 ){
+  for ( xTooth = [0:10:endLength] ){
     translate([5+xTooth,0,0]) scale(scaleF) cube(size=[6,3,3], center=true);
   }
 }
