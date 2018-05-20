@@ -56,7 +56,7 @@ L Device:R R?
 U 1 1 5AFFB546
 P 7700 3600
 F 0 "R?" H 7770 3646 50  0000 L CNN
-F 1 "0.1R" H 7770 3555 50  0000 L CNN
+F 1 "1R" H 7770 3555 50  0000 L CNN
 F 2 "Resistors_SMD:R_1206" V 7630 3600 50  0001 C CNN
 F 3 "" H 7700 3600 50  0001 C CNN
 	1    7700 3600
@@ -195,8 +195,6 @@ Wire Wire Line
 	7000 2800 7000 1750
 Text HLabel 3000 1750 0    60   Input ~ 0
 vHvSet
-Text Notes 2600 1300 0    60   ~ 0
-maxSwCurr defines the cycle by\ncycle current limit threshold\nNeeds to connect to a DAC (0 V - 3.3 V)
 Text Notes 6400 3500 2    60   ~ 0
 0.9 V max.
 $Bitmap
@@ -2338,8 +2336,6 @@ Wire Wire Line
 Connection ~ 4700 2150
 Wire Wire Line
 	4600 2150 4600 2100
-Text Notes 5100 1400 0    60   ~ 0
-Max peak switch current: 2 A\nV_CS = 0.1 Ohm * 2 A = 0.2 V\nV_CS = 1/3 * V_REF\nV_REF = 0.6 V\n
 Text Notes 5100 1600 0    60   ~ 0
 0.65 V max.
 Text Notes 4200 1600 0    60   ~ 0
@@ -2411,16 +2407,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5AFFB602
-P 7700 3800
-F 0 "#PWR?" H 7700 3550 50  0001 C CNN
-F 1 "GND" H 7550 3700 50  0000 C CNN
-F 2 "" H 7700 3800 50  0001 C CNN
-F 3 "" H 7700 3800 50  0001 C CNN
-	1    7700 3800
+P 7700 3750
+F 0 "#PWR?" H 7700 3500 50  0001 C CNN
+F 1 "GND" H 7550 3650 50  0000 C CNN
+F 2 "" H 7700 3750 50  0001 C CNN
+F 3 "" H 7700 3750 50  0001 C CNN
+	1    7700 3750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7700 3800 7700 3750
 Wire Wire Line
 	7100 2900 7100 2850
 $Comp
@@ -2514,18 +2508,6 @@ F 4 "" H 4550 -2000 50  0001 C CNN "DPN"
 	1    7700 2250
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:Q_NMOS_DGS Q?
-U 1 1 5B006066
-P 7600 3000
-F 0 "Q?" H 7805 3046 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 7800 2900 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 7800 3100 50  0001 C CNN
-F 3 "~" H 7600 3000 50  0001 C CNN
-F 4 "" H 3650 -1550 50  0001 C CNN "DPN"
-	1    7600 3000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8450 2600 8650 2600
 Wire Wire Line
@@ -2600,7 +2582,7 @@ L Device:C C?
 U 1 1 5B024469
 P 5750 2800
 F 0 "C?" H 5550 2900 50  0000 L CNN
-F 1 "47p" H 5550 2700 50  0000 L CNN
+F 1 "2n7" H 5550 2700 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 5788 2650 50  0001 C CNN
 F 3 "" H 5750 2800 50  0001 C CNN
 	1    5750 2800
@@ -2670,4 +2652,43 @@ Wire Wire Line
 Connection ~ 5600 2900
 Text Label 5150 2900 0    50   ~ 0
 vHtMon
+$Comp
+L Device:Q_NMOS_GDS Q?
+U 1 1 5B02E00D
+P 7600 3000
+F 0 "Q?" H 7806 3046 50  0000 L CNN
+F 1 "FDS2734" H 7806 2955 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7800 3100 50  0001 C CNN
+F 3 "~" H 7600 3000 50  0001 C CNN
+	1    7600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B03010E
+P 7950 3600
+F 0 "R?" H 8020 3646 50  0000 L CNN
+F 1 "1R" H 8020 3555 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206" V 7880 3600 50  0001 C CNN
+F 3 "" H 7950 3600 50  0001 C CNN
+	1    7950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3350 7950 3350
+Wire Wire Line
+	7950 3450 7950 3350
+$Comp
+L power:GND #PWR?
+U 1 1 5B035831
+P 7950 3750
+F 0 "#PWR?" H 7950 3500 50  0001 C CNN
+F 1 "GND" H 7800 3650 50  0000 C CNN
+F 2 "" H 7950 3750 50  0001 C CNN
+F 3 "" H 7950 3750 50  0001 C CNN
+	1    7950 3750
+	1    0    0    -1  
+$EndComp
+Text Notes 8200 3800 0    50   ~ 0
+\nMax. peak switch current\nComp- max = 0.9 V\nCSmax = 0.9 V\n0.9 V / 0.5 Ohm = 1.8 A
 $EndSCHEMATC
