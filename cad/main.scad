@@ -1,3 +1,8 @@
+// TODO:
+// * Slot for ESP32 antenna
+// * Mounting of Nixie HV PSU
+// * Power input = some kind of USB socket?
+
 use <8422.scad>
 use <crystal.scad>
 
@@ -64,7 +69,7 @@ module frontPanel() {
 }
 
 
-!translate([0,0,0]) difference(){
+translate([0,0,50]) difference(){
   union(){
     translate([0,fpThickness/2,0]) drop();
     scale([1,1,0.75]) translate([75,fpThickness/2,0]) rotate([0,90,0]) cylinder(r=fpThickness/2, h=155, center=true);
