@@ -6,7 +6,7 @@ module pin() {
 }
 
 module nixie8422(){
-  smoothRad = 6;
+  smoothRad = 7;
   union(){
     minkowski(){
       cube(size=[18.85-smoothRad*2, 25.1-smoothRad*2, 20-smoothRad*2], center=true);
@@ -20,5 +20,3 @@ module nixie8422(){
     }
   }
 }
-
-// nixie8422();

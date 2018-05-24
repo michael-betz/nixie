@@ -5,5 +5,3 @@ module crystal() {
     sphere(r=smoothRad);
   }
 }
-
-// crystal();
