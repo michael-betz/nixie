@@ -25,7 +25,33 @@
 
 static const char *T = "MAIN_APP";
 
-void app_main(){
+void initGpio(void)
+{
+    gpio_config_t io_conf;
+    io_conf.intr_type = GPIO_PIN_INTR_DISABLE;
+    io_conf.mode = GPIO_MODE_OUTPUT;
+    io_conf.pin_bit_mask = (1<<PIN_CLK)|(1<<PIN_DAT)|(1<<PIN_N_LATCH)|(1<<PIN_LED_DAT);
+    io_conf.pull_down_en = 0;
+    io_conf.pull_up_en = 0;
+    gpio_config(&io_conf);
+}
+
+static void nixieTask(void* arg)
+{
+    while(1){
+        vTaskDelay(3000 / portTICK_RATE_MS);
+        gpio_set_level(PIN_CLK, 1);
+        gpio_set_level(PIN_DAT, 1);
+        gpio_set_level(PIN_N_LATCH, 1);
+        vTaskDelay(3000 / portTICK_RATE_MS);
+        gpio_set_level(PIN_CLK, 0);
+        gpio_set_level(PIN_DAT, 0);
+        gpio_set_level(PIN_N_LATCH, 0);
+    }
+}
+
+void app_main()
+{
     //------------------------------
     // Enable RAM log file
     //------------------------------
@@ -36,6 +62,12 @@ void app_main(){
     // Init filesystems
     //------------------------------
     initSpiffs();
+
+    //------------------------------
+    // Init digits
+    //------------------------------
+    initGpio();
+    xTaskCreate(nixieTask, "nixieTask", 2048, NULL, 10, NULL);
 
     //------------------------------
     // Startup wifi & webserver
