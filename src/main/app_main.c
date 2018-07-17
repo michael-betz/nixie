@@ -22,6 +22,7 @@
 #include "wifi_startup.h"
 #include "web_console.h"
 #include "app_main.h"
+#include "rom/ets_sys.h"
 
 static const char *T = "MAIN_APP";
 
@@ -36,17 +37,35 @@ void initGpio(void)
     gpio_config(&io_conf);
 }
 
+#define SHIFT_DEL 2
+
+static void shiftOut( uint8_t *data, unsigned len )
+{
+    while( len-- ){
+        uint8_t tmp = *data++;
+        for (unsigned bit=0; bit<=7; bit++ ){
+            gpio_set_level(PIN_CLK, 1);
+            gpio_set_level(PIN_DAT, !(tmp&0x80));
+            ets_delay_us(SHIFT_DEL);
+            tmp <<= 1;
+            gpio_set_level(PIN_CLK, 0);
+            ets_delay_us(SHIFT_DEL);
+        }
+    }
+    gpio_set_level(PIN_N_LATCH, 1);
+    ets_delay_us(SHIFT_DEL);
+    gpio_set_level(PIN_N_LATCH, 0);
+}
+
 static void nixieTask(void* arg)
 {
+    uint64_t i=0;
     while(1){
-        vTaskDelay(3000 / portTICK_RATE_MS);
-        gpio_set_level(PIN_CLK, 1);
-        gpio_set_level(PIN_DAT, 1);
-        gpio_set_level(PIN_N_LATCH, 1);
-        vTaskDelay(3000 / portTICK_RATE_MS);
-        gpio_set_level(PIN_CLK, 0);
-        gpio_set_level(PIN_DAT, 0);
-        gpio_set_level(PIN_N_LATCH, 0);
+        if (i==0) i=1;
+        vTaskDelay(1000 / portTICK_RATE_MS);
+        shiftOut(&i, 8);
+        // ESP_LOGI(T, "%x", i);
+        i<<=1;
     }
 }
 

@@ -13,7 +13,7 @@
 // Random number within the range [a,b]
 #define RAND_AB(a,b) (rand()%(b+1-a)+a)
 
-#define PIN_CLK     25
+#define PIN_CLK     13
 #define PIN_DAT     26
 #define PIN_N_LATCH 27
 #define PIN_LED_DAT 14
