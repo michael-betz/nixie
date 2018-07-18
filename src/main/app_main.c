@@ -71,7 +71,7 @@ uint8_t g_digitLookup[6][10] = {
 #define BIT_COLON1  8
 #define BIT_COLON2 55
 
-uint64_t getTimeVal()
+uint64_t getTimeVal( uint8_t *secs )
 {
     uint64_t val = 0;
     time_t now=0;
@@ -84,13 +84,14 @@ uint64_t getTimeVal()
     val |= (1LL)<<(g_digitLookup[3][ t.tm_min/10]);
     val |= (1LL)<<(g_digitLookup[4][t.tm_hour%10]);
     val |= (1LL)<<(g_digitLookup[5][t.tm_hour/10]);
+    if( secs ) *secs = t.tm_sec;
     return val;
 }
 
 static void nixieTask(void* arg)
 {
     uint64_t val1=0, val2=0;
-    unsigned temp=0;
+    uint8_t sec=0, osec=0;
     while(1){
         // for( unsigned i=0; i<6; i++ ){
         //     for( unsigned d=0; d<10; d++ ){
@@ -100,14 +101,15 @@ static void nixieTask(void* arg)
         //         vTaskDelay(100 / portTICK_RATE_MS);
         //     }
         // }
-        val1 = getTimeVal();
+        val1 = getTimeVal( &sec );
         val2 = val1 | (1LL)<<(BIT_COLON1) | (1LL)<<(BIT_COLON2);
-        if( temp & 0x01 ){
+        if( sec != osec ){
+            osec = sec;
             shiftOut((uint8_t*)(&val2), 8);
+            vTaskDelay(15 / portTICK_RATE_MS);
         }
         shiftOut((uint8_t*)(&val1), 8);
-        temp++;
-        vTaskDelay(500 / portTICK_RATE_MS);
+        vTaskDelay(100 / portTICK_RATE_MS);
     }
 }
 
@@ -123,6 +125,10 @@ void app_main()
     // Init filesystems
     //------------------------------
     initSpiffs();
+
+    // Set timezone to Eastern Standard Time
+    setenv("TZ", "PST8PDT", 1);
+    tzset();
 
     //------------------------------
     // Init digits
@@ -141,9 +147,6 @@ void app_main()
     //------------------------------
     // Set the clock / print time
     //------------------------------
-    // Set timezone to Eastern Standard Time and print local time
-    setenv("TZ", "PST8PDT", 1);
-    tzset();
     time_t now = 0;
     struct tm timeinfo = { 0 };
     char strftime_buf[64];

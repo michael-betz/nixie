@@ -13,7 +13,7 @@
 // Random number within the range [a,b]
 #define RAND_AB(a,b) (rand()%(b+1-a)+a)
 
-#define SHIFT_DEL   10     // Bit banging delay [us]
+#define SHIFT_DEL   1     // Bit banging delay [us]
 
 #define PIN_CLK     13
 #define PIN_DAT     26
