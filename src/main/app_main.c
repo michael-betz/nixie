@@ -37,8 +37,6 @@ void initGpio(void)
     gpio_config(&io_conf);
 }
 
-#define SHIFT_DEL 2
-
 static void shiftOut( uint8_t *data, unsigned len )
 {
     while( len-- ){
@@ -57,15 +55,59 @@ static void shiftOut( uint8_t *data, unsigned len )
     gpio_set_level(PIN_N_LATCH, 0);
 }
 
+// Mapping of output channels g_digitLookup[X][Y]
+// X = nixie index (from right)
+// Y = digit
+uint8_t g_digitLookup[6][10] = {
+//    0  1  2  3  4  5  6  7  8  9
+    {25, 4, 5, 6, 7,28, 3,24,27,26},
+    { 1,10,11,12,13,14, 9, 2,15, 0},
+    {22,31,16,17,18,19,30,23,20,21},
+    {63,50,51,52,53,54,49,48,61,62},
+    {42,45,46,47,32,33,44,43,40,41},
+    {36,39,60,58,57,56,38,37,34,35}
+};
+
+#define BIT_COLON1  8
+#define BIT_COLON2 55
+
+uint64_t getTimeVal()
+{
+    uint64_t val = 0;
+    time_t now=0;
+    struct tm t = { 0 };
+    time(&now);
+    localtime_r(&now, &t);
+    val |= (1LL)<<(g_digitLookup[0][ t.tm_sec%10]);
+    val |= (1LL)<<(g_digitLookup[1][ t.tm_sec/10]);
+    val |= (1LL)<<(g_digitLookup[2][ t.tm_min%10]);
+    val |= (1LL)<<(g_digitLookup[3][ t.tm_min/10]);
+    val |= (1LL)<<(g_digitLookup[4][t.tm_hour%10]);
+    val |= (1LL)<<(g_digitLookup[5][t.tm_hour/10]);
+    return val;
+}
+
 static void nixieTask(void* arg)
 {
-    uint64_t i=0;
+    uint64_t val1=0, val2=0;
+    unsigned temp=0;
     while(1){
-        if (i==0) i=1;
-        vTaskDelay(1000 / portTICK_RATE_MS);
-        shiftOut(&i, 8);
-        // ESP_LOGI(T, "%x", i);
-        i<<=1;
+        // for( unsigned i=0; i<6; i++ ){
+        //     for( unsigned d=0; d<10; d++ ){
+        //         ESP_LOGI(T, "[%d,%d]", i, d);
+        //         val = (1LL)<<(g_digitLookup[i][d]);
+        //         shiftOut((uint8_t*)(&val), 8);
+        //         vTaskDelay(100 / portTICK_RATE_MS);
+        //     }
+        // }
+        val1 = getTimeVal();
+        val2 = val1 | (1LL)<<(BIT_COLON1) | (1LL)<<(BIT_COLON2);
+        if( temp & 0x01 ){
+            shiftOut((uint8_t*)(&val2), 8);
+        }
+        shiftOut((uint8_t*)(&val1), 8);
+        temp++;
+        vTaskDelay(500 / portTICK_RATE_MS);
     }
 }
 
