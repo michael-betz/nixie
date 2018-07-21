@@ -105,7 +105,7 @@ static void nixieTask(void* arg)
         val2 = val1 | (1LL)<<(BIT_COLON1) | (1LL)<<(BIT_COLON2);
         if( sec != osec ){
             osec = sec;
-            shiftOut((uint8_t*)(&val2), 8);
+            // shiftOut((uint8_t*)(&val2), 8);
             vTaskDelay(15 / portTICK_RATE_MS);
         }
         shiftOut((uint8_t*)(&val1), 8);
