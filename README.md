@@ -1,9 +1,9 @@
 # nixie
-
-![Nixie photo](https://github.com/yetifrisstlama/nixie/raw/master/cad/pic.jpg)
-
 My exercise in OpenScad.
 a HP 5245L frequency counter had to die for this ...
+
+![Nixie render](https://github.com/yetifrisstlama/nixie/raw/master/cad/3Dpic.png)
+![Nixie photo](https://github.com/yetifrisstlama/nixie/raw/master/cad/pic.jpg)
 
 # Lessons learned the hard way
 Murphy was strong on this one ...
